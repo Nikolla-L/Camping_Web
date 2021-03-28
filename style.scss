@@ -1,0 +1,105 @@
+$background-img: url('../images/BG-img.jpg');
+$orange-color1: #E76F51;
+$orange-color2:#ffa18a;
+
+@mixin flexCenter($direction){
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: $direction;
+}
+@mixin middle($x, $y){
+    transform:translate($x, $y);
+}
+header{
+    transition: 0.5s;
+    height:150px;
+    align-items: center;
+    position:fixed;
+    z-index:3;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    .logo{
+        background-color:$orange-color1;
+        width:50px;
+        height:50px;
+        border-radius:25px;
+        @include flexCenter(row);
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        width:650px;
+    }
+    a{
+        color:white;
+        font:18px roboto;
+        transition:0.3s;
+        &:hover{
+            color:$orange-color2;
+        }
+    }
+}
+.head-backgroundImg{
+    background-image:$background-img;
+    width:100%;
+    height:1080px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index:1;
+    position: absolute;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.section1{
+    z-index:2;
+    position: absolute;
+    @include flexCenter(column);
+    width:100%;
+    .sec1-title{
+        width:90%;
+        max-width:580px;
+    }
+    h1{
+        cursor:context-menu;
+        font:52px/89px archivo;
+        color:white;
+        text-align: center;
+    }
+    p{
+        cursor:context-menu;
+        margin-top:50px;
+        font:18px/28px roboto;
+        color:white;
+        text-align: center;
+    }
+    height:1080px; 
+    backdrop-filter: brightness(60%);
+    button{
+        margin-left:50%;
+        @include middle(-50%, 0);
+    }
+    padding-bottom:200px;
+    button{
+        cursor:pointer;
+        width:205px;
+        height:50px;
+        border-radius:25px;
+        background-color:$orange-color1;
+        border:none;
+        outline:none;
+        color:white;
+        font:18px roboto;
+        margin-top:50px;
+        transition:0.4s;
+        &:hover{
+            background-color:$orange-color2;
+        }
+    }
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.change-zoom{
+    height:60px;
+}
