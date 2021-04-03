@@ -1,0 +1,9 @@
+$(document).ready(()=>{
+    $(window).scroll(()=>{
+        if($(window).scrollTop()>0){
+            $('header').addClass('change-zoom')
+        }else{
+            $('header').removeClass('change-zoom')
+        }
+    })
+})
