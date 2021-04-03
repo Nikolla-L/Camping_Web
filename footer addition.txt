@@ -1,0 +1,18 @@
+
+footer{
+    margin-top:4000px;
+    position:absolute;
+    z-index:4;
+    @include flexCenter(column);
+    .footer-container{
+        width:90%;
+        @include flexCenter(row);
+        justify-content: space-around;
+    }
+    .copyRight{
+        margin-left:50%;
+        @include middle(-50%, 0);
+        font:15px roboto;
+        color:gray;
+    }
+}
